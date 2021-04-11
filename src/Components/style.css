@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+.box {
+  width: 25vw;
+  height: 60vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 3rem rgb(211, 153, 196) ;
+  background: rgb(226, 178, 214);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  min-width: 20rem;
+  min-height: 35rem;
+}
+
+.inputData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  padding: 15px 20px;
+  margin-top: 25px;
+  border-radius: 3rem;
+}
+
+.location{
+  text-align: center;
+  margin-top: 9rem;
+  font-size: 4rem;
+}
+
+.temp {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2.5rem;
+  /* font-weight: bold; */
+  color: black;
+}
+
+.tempmin_max {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.fas {
+  animation: lrt 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes lrt{
+  0%{
+    transform: translate(8px);
+  }
+  100%{
+    transform: translate(-8px);
+  }
+}
+.error{
+  text-align: center;
+  margin-top: 150px;
+  font-size: 30px;
+  font-style: normal;
+}
+
+
+.wave1 {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  opacity: 0.2;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+  
+}
+.wave2 {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  opacity: 0.15;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 4000ms infinite linear;
+  z-index: 2;
+  
+}
+.wave3 {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  opacity: 0.1;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 5000ms infinite linear;
+  z-index: 3;
+  
+}
+
+
+@keyframes drift{
+  from{
+    transform: rotate(0deg) ;
+  }
+  from{
+    transform: rotate(360deg) ;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: "600px") {
+  .box {
+    width: 90vw;
+    height: 80vh;
+  }
+  .wave {
+    top: 85%;
+  }
+  #weathercon {
+    font-size: 5rem;
+  }
+}
+
+
+
