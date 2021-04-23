@@ -38,9 +38,10 @@ body {
 }
 
 .inputField {
-  padding: 15px 40px;
+  padding: 15px 30px;
   margin-top: 25px;
   font-size: 2rem;
+  border: 3px solid black ;
   border-radius: 3rem;
 }
 
@@ -54,7 +55,6 @@ body {
   margin-top: 1rem;
   text-align: center;
   font-size: 2.5rem;
-  /* font-weight: bold; */
   color: black;
 }
 
@@ -140,15 +140,10 @@ body {
   }
 }
 
-@media (max-width: "600px") {
-  .box {
-    width: 90vw;
-    height: 80vh;
+@media (max-width: "1140px") {
+  .inputField {
+    padding: 5px 10px;
+    
   }
-  .wave {
-    top: 85%;
-  }
-  #weathercon {
-    font-size: 5rem;
-  }
+  
 }
