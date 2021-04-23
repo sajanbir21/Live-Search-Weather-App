@@ -1,34 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family:  'Ubuntu', sans-serif;
 }
 
 body {
-  background: rgb(255, 255, 255);
+  position: relative;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  height: 100vh;
-  width: 100vw;
   font-family: "Roboto", sans-serif;
 }
 
 .box {
-  width: 25vw;
-  height: 60vh;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 3rem rgb(211, 153, 196) ;
+  width: 45vw;
+  height: 50vh;
+  border-radius: 2rem;
+  box-shadow: 0 0.2rem 3rem rgb(211, 153, 196);
   background: rgb(226, 178, 214);
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  min-width: 20rem;
-  min-height: 35rem;
+  
 }
 
 .inputData {
@@ -38,14 +38,15 @@ body {
 }
 
 .inputField {
-  padding: 15px 20px;
+  padding: 15px 40px;
   margin-top: 25px;
+  font-size: 2rem;
   border-radius: 3rem;
 }
 
-.location{
+.location {
   text-align: center;
-  margin-top: 9rem;
+  margin-top: 2rem;
   font-size: 4rem;
 }
 
@@ -61,7 +62,7 @@ body {
   text-align: center;
   margin-top: 0.5rem;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #000000;
 }
 
@@ -69,25 +70,24 @@ body {
   animation: lrt 2s ease-in-out infinite alternate-reverse both;
 }
 
-@keyframes lrt{
-  0%{
-    transform: translate(8px);
+@keyframes lrt {
+  0% {
+    transform: translate(4px);
   }
-  100%{
-    transform: translate(-8px);
+  100% {
+    transform: translate(-4px);
   }
 }
-.error{
+.search {
   text-align: center;
-  margin-top: 150px;
-  font-size: 30px;
-  font-style: normal;
+  margin-top: 60px;
+  font-size: 45px;
+  font-weight:bolder;
 }
-
 
 .wave1 {
   position: absolute;
-  top: 120%;
+  top: 150%;
   left: 50%;
   opacity: 0.2;
   background: white;
@@ -99,11 +99,10 @@ body {
   border-radius: 43%;
   animation: drift 3000ms infinite linear;
   z-index: 1;
-  
 }
 .wave2 {
   position: absolute;
-  top: 120%;
+  top: 150%;
   left: 50%;
   opacity: 0.15;
   background: white;
@@ -115,11 +114,10 @@ body {
   border-radius: 43%;
   animation: drift 4000ms infinite linear;
   z-index: 2;
-  
 }
 .wave3 {
   position: absolute;
-  top: 120%;
+  top: 150%;
   left: 50%;
   opacity: 0.1;
   background: white;
@@ -131,25 +129,16 @@ body {
   border-radius: 43%;
   animation: drift 5000ms infinite linear;
   z-index: 3;
-  
 }
 
-
-@keyframes drift{
-  from{
-    transform: rotate(0deg) ;
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
   }
-  from{
-    transform: rotate(360deg) ;
+  from {
+    transform: rotate(360deg);
   }
 }
-
-
-
-
-
-
-
 
 @media (max-width: "600px") {
   .box {
@@ -163,6 +152,3 @@ body {
     font-size: 5rem;
   }
 }
-
-
-

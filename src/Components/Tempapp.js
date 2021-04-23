@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-import axios from 'axios'
+import axios from "axios";
 
 const Tempapp = () => {
   const [city, setCity] = useState();
@@ -14,14 +14,14 @@ const Tempapp = () => {
       setCity(resJason.main);
     };
     fetchApi();
-  }, [search])
+  }, [search]);
 
   return (
     <>
       <div className="box">
         <div className="inputData">
           <input
-            type="search"
+            type="search city"
             value={search}
             className="inputField"
             onChange={(event) => {
@@ -30,17 +30,27 @@ const Tempapp = () => {
           />
         </div>
 
-        { ! city ? (
-          <p className="error">No Data Found</p>
+        {!city ? (
+          <div>
+            <p className="search">
+              Search Location
+              <i class="fas fa-search-location"></i>
+            </p>
+            <div className="wave1"></div>
+            <div className="wave2"></div>
+            <div className="wave3"></div>
+          </div>
         ) : (
           <div>
             <div className="info">
               <h2 className="location">
-                <i className="fas fa-street-view"></i>
                 {search}
+                <i className="fas fa-street-view"></i>
               </h2>
               <h1 className="temp">{city.temp}*Cel </h1>
-              <h3 className="tempmin_max">Min : {city.temp_min}*Cel | Max : {city.temp_max}*Cel</h3>
+              <h3 className="tempmin_max">
+                Min: {city.temp_min}*Cel | Max: {city.temp_max}*Cel
+              </h3>
             </div>
             <div className="wave1"></div>
             <div className="wave2"></div>
